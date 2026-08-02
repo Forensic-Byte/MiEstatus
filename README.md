@@ -34,13 +34,13 @@ The app is designed for non-technical users: no account is required, all content
 
 - **TPS Status Checker** — A two-question tool that asks for the user's country and last approval date, then calculates whether they need to act now, should prepare to renew soon, or are currently in good standing. Users can sign up for email reminders.
 
-- **Step-by-Step I-821 Guide** — A six-step interactive walkthrough for completing Form I-821 (TPS application), covering eligibility, personal information, travel history, criminal history, submission, and post-filing expectations. Each step includes collapsible subsections, tips, important warnings, and direct links to official USCIS resources.
+- **Step-by-Step I-821 Guide** — A six-step interactive walkthrough for completing Form I-821 (TPS application), covering eligibility, personal information, travel history, criminal history, submission, and post-filing expectations. Each step includes collapsible subsections, tips, important warnings, relevant resources located within the website, and direct links to official USCIS resources.
 
 - **Forms & Deadlines Tracking** — Cards for each relevant form (I-821, I-765, I-131, I-912) with download links, filing instructions, and deadline information.
 
-- **Resource Directory** — Curated links to free translators, legal clinics, case status checkers, ASC locators, and consulate finders. Includes warnings about notario fraud common in immigrant communities.
+- **Resource Directory** — Curated links to free translators, legal clinics, case status checkers, ASC locators, free or low cost transportation options, immigration attorneys, verified preparers, and consulate finders. Includes warnings about notario fraud common in immigrant communities.
 
-- **Email Reminders** — Users can subscribe to receive notifications when their TPS re-registration window opens or when their status is approaching expiration. Reminders are stored in Supabase.
+- **Email Reminders** — Users can subscribe to receive notifications when their TPS re-registration window opens or when their status is approaching expiration. Reminders are stored in Supabase. (This feature is coming soon).
 
 - **Smart Link Detection** — Content automatically detects references to USCIS forms, phone numbers, and external resources, turning them into clickable links inline.
 
@@ -175,7 +175,7 @@ Row-level security is enabled with open access for anon and authenticated roles,
 
 ## Supported Countries
 
-The app currently supports the following TPS-eligible countries:
+The app currently supports only the designated TPS-eligible countries:
 
 - El Salvador
 - Lebanon
@@ -193,12 +193,12 @@ Additional countries (Haiti, Honduras, Venezuela, Syria, Yemen, Ethiopia, Nepal,
 
 | Screen | Preview |
 |---|---|
-| Landing Page | ![Landing Page](public/assets/images/landing-placeholder.png) |
-| Country Picker | ![Country Picker](public/assets/images/country-picker-placeholder.png) |
-| Dashboard | ![Dashboard](public/assets/images/dashboard-placeholder.png) |
-| I-821 Form Guide | ![Form Guide](public/assets/images/form-guide-placeholder.png) |
-| Status Checker | ![Status Checker](public/assets/images/status-checker-placeholder.png) |
-| Status Results | ![Status Results](public/assets/images/status-results-placeholder.png) |
+| Landing Page | ![Landing Page](public/assets/images/landing-page.png) |
+| Country Picker | ![Country Picker](public/assets/images/country-picker.png) |
+| Dashboard | ![Dashboard](public/assets/images/dashboard.png) |
+| I-821 Form Guide | ![Form Guide](public/assets/images/form-guide.png) |
+| Status Checker | ![Status Checker](public/assets/images/status-checker.png) |
+| Status Results | ![Status Results](public/assets/images/status-results.png) |
 
 ---
 
@@ -207,8 +207,8 @@ Additional countries (Haiti, Honduras, Venezuela, Syria, Yemen, Ethiopia, Nepal,
 - **Automated USCIS News Sync** — Pull real-time updates from USCIS feeds instead of manually curating news cards.
 - **Account & Saved Profiles** — Let users create accounts to save their country, status, and reminder preferences across devices.
 - **Interactive Form Filler** — Guide users through filling out Form I-821 field by field with validation and a printable summary.
-- **ASC & Consulate Locator** — Map-based tool to find the nearest Application Support Center or consulate, filtered by distance.
-- **Verified Preparer Directory** — Searchable directory of vetted immigration form preparers and accredited representatives with ratings and pricing.
+- **ASC & Consulate Locator** — Map-based tool to find the nearest Application Support Center, or consulate, filtered by distance.
+- **Verified Preparer Directory** — Searchable directory of vetted immigration form preparers and accredited representatives with ratings and pricing, while also being filtered by distance.
 - **Multi-Country Support** — Expand dashboard content beyond El Salvador to all TPS-designated countries.
 - **Push Notifications** — Beyond email, add SMS or browser push notifications for deadline reminders.
 - **Accessibility Audit** — Full WCAG 2.1 AA compliance review and screen reader testing.
