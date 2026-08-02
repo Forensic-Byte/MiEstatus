@@ -195,7 +195,7 @@ Screenshots showcasing key features of the MiEstatus application:
 
 | Screen | Preview |
 |---|---|
-| Landing Page | ![Landing Page](public/assets/images/landing-page.png) |
+| Landing Page | ![Landing Page](public/assets/images/landing.png) |
 | Country Picker | ![Country Picker](public/assets/images/country-picker.png) |
 | Dashboard | ![Dashboard](public/assets/images/dashboard.png) |
 | I-821 Form Guide | ![Form Guide](public/assets/images/form-guide.png) |
