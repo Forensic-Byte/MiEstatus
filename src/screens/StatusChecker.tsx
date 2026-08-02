@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { CheckCircle, Lightbulb } from 'lucide-react';
 import { STRINGS, COUNTRIES, TPS_DESIGNATIONS, type Lang } from '@/content';
 import { linkify } from '@/lib/linkify';
-import { Logo, LangToggle, CountryPicker } from '@/components/shared';
+import { Logo, LangToggle, CountryPicker, NavBar } from '@/components/shared';
 import { supabase } from '@/lib/supabase';
 
 export function StatusChecker({
@@ -12,6 +12,9 @@ export function StatusChecker({
   onContinue,
   onBack,
   onViewAll,
+  onHome,
+  onDashboard,
+  onGuide,
 }: {
   lang: Lang;
   setLang: (l: Lang) => void;
@@ -19,6 +22,9 @@ export function StatusChecker({
   onContinue: () => void;
   onBack: () => void;
   onViewAll: () => void;
+  onHome: () => void;
+  onDashboard: () => void;
+  onGuide: () => void;
 }) {
   const s = STRINGS[lang];
   const [selectedCountry, setSelectedCountry] = useState(country);
@@ -90,6 +96,13 @@ export function StatusChecker({
             <span style={{ fontFamily: "'Source Serif 4', serif" }}>{s.toolName}</span>
           </button>
           <div className="flex items-center gap-3">
+            <NavBar
+              lang={lang}
+              current="dashboard"
+              onHome={onHome}
+              onDashboard={onDashboard}
+              onGuide={onGuide}
+            />
             <LangToggle lang={lang} setLang={setLang} />
           </div>
         </div>

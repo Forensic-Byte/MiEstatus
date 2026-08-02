@@ -96,6 +96,9 @@ export default function App() {
           onContinue={() => goDashboardI821()}
           onBack={() => setScreen('landing')}
           onViewAll={() => goDashboard()}
+          onHome={() => setScreen('landing')}
+          onDashboard={() => goDashboard()}
+          onGuide={() => setScreen('form')}
         />
       )}
       {screen === 'dashboard' && (
@@ -103,7 +106,7 @@ export default function App() {
           lang={lang}
           setLang={setLang}
           onFormClick={() => setScreen('form')}
-          onHome={() => goDashboard()}
+          onHome={() => setScreen('landing')}
           country={country}
           scrollToAsc={findAsc}
           scrollToPreparer={findPreparer}
@@ -118,7 +121,7 @@ export default function App() {
           lang={lang}
           setLang={setLang}
           onBack={() => goDashboard()}
-          onHome={() => goDashboard()}
+          onHome={() => setScreen('landing')}
           onDashboard={() => goDashboard()}
           onFindAsc={() => goDashboard(true)}
           onFindPreparer={goDashboardPreparer}
