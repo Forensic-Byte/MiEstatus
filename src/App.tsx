@@ -103,7 +103,7 @@ export default function App() {
           lang={lang}
           setLang={setLang}
           onFormClick={() => setScreen('form')}
-          onHome={() => setScreen('landing')}
+          onHome={() => goDashboard()}
           country={country}
           scrollToAsc={findAsc}
           scrollToPreparer={findPreparer}
@@ -118,7 +118,7 @@ export default function App() {
           lang={lang}
           setLang={setLang}
           onBack={() => goDashboard()}
-          onHome={() => setScreen('landing')}
+          onHome={() => goDashboard()}
           onDashboard={() => goDashboard()}
           onFindAsc={() => goDashboard(true)}
           onFindPreparer={goDashboardPreparer}
