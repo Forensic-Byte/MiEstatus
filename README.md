@@ -40,7 +40,7 @@ The app is designed for non-technical users: no account is required, all content
 
 - **Resource Directory** — Curated links to free translators, legal clinics, case status checkers, ASC locators, free or low cost transportation options, immigration attorneys, verified preparers, and consulate finders. Includes warnings about notario fraud common in immigrant communities.
 
-- **Email Reminders** — Users can subscribe to receive notifications when their TPS re-registration window opens or when their status is approaching expiration. Reminders are stored in Supabase. (This feature is coming soon).
+- **Email Reminders (Coming Soon)** — Backend support has been prepared for future notifications when TPS re-registration windows open or when a user's status approaches expiration.
 
 - **Smart Link Detection** — Content automatically detects references to USCIS forms, phone numbers, and external resources, turning them into clickable links inline.
 
@@ -164,12 +164,14 @@ The app uses a single Supabase table:
 |---|---|---|
 | `id` | uuid (PK) | Auto-generated unique identifier |
 | `email` | text | User's email for notifications |
-| `country` | text | Selected country of origin |
-| `reminder_type` | text | `notify` (re-registration opening) or `remind` (status still current) |
+| `country` | text | Selected TPS country |
+| `reminder_type` | text | Notification preference |
 | `designation_end_date` | date | TPS designation end date at time of signup |
 | `created_at` | timestamptz | Record creation timestamp |
 
-Row-level security is enabled with open access for anon and authenticated roles, since the app is single-tenant with no sign-in screen.
+The reminder subscription system has been implemented as a backend-ready feature and is currently marked as "Coming Soon" in the application while notification workflows are finalized.
+
+Row-level security is enabled in Supabase to protect database access.
 
 ---
 
@@ -189,7 +191,7 @@ Additional countries (Haiti, Honduras, Venezuela, Syria, Yemen, Ethiopia, Nepal,
 
 ## Screenshots
 
-> Add screenshots to the `public/assets/images/` directory and update the paths below.
+Screenshots showcasing key features of the MiEstatus application:
 
 | Screen | Preview |
 |---|---|
